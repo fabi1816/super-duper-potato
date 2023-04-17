@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    {% load static %}
+    <link rel="shortcut icon" href="{%  static 'recipes/fork.png' %}">
+    <link rel="stylesheet" href="{% static 'recipes/style.css' %}">
+    <title>Recipes - Django</title>
+</head>
+<body>
+    <header>
+        <h1>Recipes app</h1>
+
+        {% if user.is_authenticated %}
+        <span>Welcome {{ user.username }}!</span>
+        <a href="{% url 'recipes:logout' %}">Logout</a>
+        {% else %}
+        <span class="error-msg">Unauthorized access</span>
+        {% endif %}
+    </header>
+
+    {% block "content" %}{% endblock %}
+
+    <footer>Fabi Inc.</footer>
+</body>
+</html>

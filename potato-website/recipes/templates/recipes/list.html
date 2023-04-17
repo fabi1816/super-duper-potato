@@ -1,0 +1,12 @@
+{% extends "recipes/base.html" %}
+
+{% block "content" %}
+<dl>
+    {% for recipe in recipe_list %}
+    <dt>
+        <a href="{% url 'recipes:detalles' recipe.id %}">{{ recipe.title }}:</a>
+    </dt>
+    <dd>{{ recipe.description }}</dd>
+    {% endfor %}
+</dl>
+{% endblock "content" %}

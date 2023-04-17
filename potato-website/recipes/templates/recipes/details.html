@@ -1,0 +1,21 @@
+{% extends "recipes/base.html" %}
+
+{% block "content" %}
+<h3>{{ recipe.title }}</h3>
+
+<fieldset>
+    <legend>Ingredients</legend>
+    <ul>
+        {% for ing in recipe.ingredient_set.all %}
+        <li>
+            {{ ing.name }}: {{ ing.quantity }}
+        </li>
+        {% endfor %}
+    </ul>
+</fieldset>
+
+<h4>Instructions</h4>
+<p>
+    {{ recipe.instructions }}
+</p>
+{% endblock "content" %}
