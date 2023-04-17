@@ -104,6 +104,7 @@ celerybeat.pid
 # Environments
 .env
 .venv
+.potato-venv
 env/
 venv/
 ENV/
