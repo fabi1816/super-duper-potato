@@ -16,14 +16,14 @@ Project strucure
    |
    +---docs: Sphinx documentation
    |
-   \---potato-website: Project container folder, its name is not important and can be changed
-       |   manage.py: A command-line utility that lets you interact with this Django project in various ways.
+   \---potato-website: Project container folder, its name can be changed
+       |   manage.py: Command-line utility to interact with this Django project
        |
-       +---potatosite: Actual Python package for your Django web project.
-       |       asgi.py: An entry-point for ASGI-compatible web servers to serve your project.
-       |       settings.py: Settings/configuration for this Django project.
-       |       urls.py: The URL declarations for this Django project, a "table of contents" of your Django-powered site.
-       |       wsgi.py: An entry-point for WSGI-compatible web servers to serve your project.
+       +---potatosite: Actual Python package for the Django web project
+       |       asgi.py: Entry-point for ASGI-compatible web servers
+       |       settings.py: Settings/configuration for this Django project
+       |       urls.py: The URL declarations for this Django project, a "table of contents" of sorts
+       |       wsgi.py: Entry-point for WSGI-compatible web servers
        |
        +---recipes: Houses the recipes application
        |   |   admin.py
