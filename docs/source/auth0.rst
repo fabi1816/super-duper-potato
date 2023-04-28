@@ -1,14 +1,17 @@
 Auth0
 =====
 
-`Auth0 <https://auth0.com/>` is a 3rd party tool for authentication and authorization.
+`Auth0 <https://auth0.com/>`_ is a 3rd party tool for authentication and authorization.
 
 Auth0 simplifies a lot since it already implements federated access as well as custom user-pass login
 
 Configurations
 --------------
 
-From the Auth0 site:
+To use the Auth0 API from the Django project we need some configurations
+
+Auth0 configuration dashboard
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Allowed callback URLs: ``http://127.0.0.1:8000/recipes/callback``
 
@@ -21,7 +24,8 @@ From the Auth0 site:
   * The ``logout`` view-method calls back to the Auth0 API with a ``returnTo`` parameter
   * This ``returnTo`` parameter/address/URL is the one that needs to be defined in the Auth0 dashboard
 
-From the Django project:
+Django project configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * ``Login`` method: Calls Auth0 API passing it the absolute URI to the ``callback`` method
 * ``Logout`` method: Clears the session and redirects to an Auth0 logout URL passing the ``returnTo`` URL
