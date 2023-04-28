@@ -6,25 +6,27 @@ I'll try to keep this organized
 
 (More than a roadmap is a list of things I want)
 
-+--------+----------------------------+
-| Status | Main Functionality         |
-+========+============================+
-|    80% | Main potato site           |
-+--------+----------------------------+
-|    60% | Recipes app                |
-+--------+----------------------------+
-|    25% | Frontpage app              |
-+--------+----------------------------+
-|     0% | Security app               |
-+--------+----------------------------+
-|    30% | Document the project       |
-+--------+----------------------------+
-|     0% | CD/CI System               |
-+--------+----------------------------+
-|     0% | Cloud Server               |
-+--------+----------------------------+
-|     0% | Miscellaneous              |
-+--------+----------------------------+
++--------+------------------------------+
+| Status | Main Functionality           |
++========+==============================+
+|    80% | :ref:`potato-roadmap`        |
++--------+------------------------------+
+|    60% | :ref:`recipes-roadmap`       |
++--------+------------------------------+
+|    25% | :ref:`frontpage-roadmap`     |
++--------+------------------------------+
+|     0% | :ref:`security-roadmap`      |
++--------+------------------------------+
+|    30% | :ref:`documentation-roadmap` |
++--------+------------------------------+
+|     0% | :ref:`cdci-roadmap`          |
++--------+------------------------------+
+|     0% | :ref:`cloud-server-roadmap`  |
++--------+------------------------------+
+|     0% | :ref:`miscellaneous-roadmap` |
++--------+------------------------------+
+
+.. _potato-roadmap:
 
 Main Potato site
 ----------------
@@ -40,6 +42,8 @@ This is the Django project itself, it's where all other applications live
 +--------+----------------------------------------------+
 |        | Externalize the configurations               |
 +--------+----------------------------------------------+
+
+.. _recipes-roadmap:
 
 Recipes Application
 -------------------
@@ -65,6 +69,8 @@ Logged-in users can also access the recipes instructions
 |        | Add images to the recipes                       |
 +--------+-------------------------------------------------+
 
+.. _frontpage-roadmap:
+
 FrontPage Application
 ---------------------
 
@@ -81,6 +87,8 @@ A very simple applications that shows a frontpage with all available application
 +--------+----------------------------------------------------------------------------+
 |        | Improve page styles                                                        |
 +--------+----------------------------------------------------------------------------+
+
+.. _security-roadmap:
 
 Security Application
 --------------------
@@ -101,6 +109,8 @@ A hidden application with not visible pages that will handle all things related 
 |        | Only allow registered users to be logged-in users    |
 +--------+------------------------------------------------------+
 
+.. _documentation-roadmap:
+
 Documentation
 -------------
 
@@ -113,6 +123,8 @@ A professional project *must* have decent documentation
 +--------+-----------------------------------------------------------------+
 |        | Add the documentation as another application to the potato site |
 +--------+-----------------------------------------------------------------+
+
+.. _cdci-roadmap:
 
 CD/CI System
 ------------
@@ -137,6 +149,8 @@ We want to automatize as much as possible and for that we'll use github actions 
 |        | Deploy the documentation to Azure      |
 +--------+----------------------------------------+
 
+.. _cloud-server-roadmap:
+
 Cloud Server
 ------------
 
@@ -157,6 +171,8 @@ We'll use the thight integration between github and Azure to deploy into that Cl
 +--------+-------------------------------------------------+
 |        | Setup DNS                                       |
 +--------+-------------------------------------------------+
+
+.. _miscellaneous-roadmap:
 
 Miscellaneous
 -------------
