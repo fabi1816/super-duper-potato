@@ -1,5 +1,5 @@
-Application description
-=======================
+Description
+===========
 
 Super-duper-potato is a POC Django POS site that contains a number of custom applications that the author is using to learn multiple technologies.
 
