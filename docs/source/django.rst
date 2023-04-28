@@ -105,7 +105,7 @@ Some of the migrations are for the default Django applications, others for the d
 Default installed applications
 ------------------------------
 
-These are defined in the `mainsite.settings` file:
+These are defined in the ``potatosite.settings`` file by default:
 
 * ``django.contrib.admin``: The admin site.
 * ``django.contrib.auth``: An authentication system.
