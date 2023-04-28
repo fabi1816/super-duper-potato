@@ -4,7 +4,11 @@
 <dl>
     {% for recipe in recipes_list %}
     <dt>
+        {% if user.is_authenticated %}
         <a href="{% url 'recipes:details' recipe.id %}">{{ recipe.title }}:</a>
+        {% else %}
+        {{ recipe.title }}:
+        {% endif %}
     </dt>
     <dd>{{ recipe.description }}</dd>
     {% endfor %}
