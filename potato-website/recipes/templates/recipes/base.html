@@ -12,7 +12,8 @@
 </head>
 <body>
     <header>
-        <h1>Recipes app</h1>
+        <h1>Fabi Inc.</h1>
+        <h2>Recipes app</h2>
 
         {% if user.is_authenticated %}
         <span>Welcome {{ user.username }}!</span>
@@ -24,6 +25,5 @@
 
     {% block "content" %}{% endblock %}
 
-    <footer>Fabi Inc.</footer>
 </body>
 </html>
