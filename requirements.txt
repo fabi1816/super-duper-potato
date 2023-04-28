@@ -6,3 +6,5 @@ django
 authlib
 requests
 
+# For document generation
+sphinx
