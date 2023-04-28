@@ -10,7 +10,9 @@ Welcome to Super-duper-potato's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   description
+   django
+   auth0
 
 Indices and tables
 ==================
