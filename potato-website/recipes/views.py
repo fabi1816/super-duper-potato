@@ -4,7 +4,7 @@ from recipes.models import Recipe
 
 def list_recipes(request):
     return render(request, "recipes/list.html", context={
-        "recipes_list": Recipe.object.all()
+        "recipes_list": Recipe.objects.all()
     })
 
 
