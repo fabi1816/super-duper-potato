@@ -10,62 +10,61 @@ Project strucure
 
 .. code-block:: sh
 
-   super-dupper-potato: Project root
-   |   readme.md
-   |   requirements.txt
-   |
-   +---docs: Sphinx documentation
-   |
-   \---potato-website: Project container folder, its name can be changed
-       |   manage.py: Command-line utility to interact with this Django project
-       |
-       +---potatosite: Actual Python package for the Django web project
-       |       asgi.py: Entry-point for ASGI-compatible web servers
-       |       settings.py: Settings/configuration for this Django project
-       |       urls.py: The URL declarations for this Django project, a "table of contents" of sorts
-       |       wsgi.py: Entry-point for WSGI-compatible web servers
-       |
-       +---recipes: Houses the recipes application
-       |   |   admin.py
-       |   |   apps.py
-       |   |   models.py: The data models of the recipes application
-       |   |   tests.py: Tests for the recipes application
-       |   |   urls.py: URL mappings for the recipes application
-       |   |   views.py: Contains the classes that drive the pages and their data
-       |   |
-       |   +---static
-       |   |   |
-       |   |   \---recipes: Contains the static resources for the recipes application
-       |   |       |
-       |   |       \---images
-       |   |
-       |   +---templates
-       |   |   |
-       |   |   \---recipes: Contains the templates for the recipes application
-       |   |
-       |   \---migrations: The database migrations for the recipes application
-       |
-       \---index: Houses the custom portal directory application
-
+  super-dupper-potato: Project root
+  |   readme.md
+  |   requirements.txt
+  |
+  +---docs: Sphinx documentation
+  |
+  \---potato-website: Project container folder, its name can be changed
+      |   manage.py: Command-line utility to interact with this Django project
+      |
+      +---potatosite: Actual Python package for the Django web project
+      |       asgi.py: Entry-point for ASGI-compatible web servers
+      |       settings.py: Settings/configuration for this Django project
+      |       urls.py: The URL declarations for this Django project, a "table of contents" of sorts
+      |       wsgi.py: Entry-point for WSGI-compatible web servers
+      |
+      +---recipes: Houses the recipes application
+      |   |   admin.py
+      |   |   apps.py
+      |   |   models.py: The data models of the recipes application
+      |   |   tests.py: Tests for the recipes application
+      |   |   urls.py: URL mappings for the recipes application
+      |   |   views.py: Contains the classes that drive the pages and their data
+      |   |
+      |   +---static
+      |   |   |
+      |   |   \---recipes: Contains the static resources for the recipes application
+      |   |       |
+      |   |       \---images
+      |   |
+      |   +---templates
+      |   |   |
+      |   |   \---recipes: Contains the templates for the recipes application
+      |   |
+      |   \---migrations: The database migrations for the recipes application
+      |
+      \---index: Houses the custom portal directory application
 
 Useful commands
 ---------------
 
 .. code-block:: sh
-    :caption: Run development server
+  :caption: Run development server
 
-    > python manage.py runserver
+  > python manage.py runserver
 
 
 .. code-block:: sh
-    :caption: Add new application to the Django project:
+  :caption: Add new application to the Django project:
 
-    > python manage.py startapp NEW_APP_NAME
+  > python manage.py startapp NEW_APP_NAME
 
 New application steps
 ^^^^^^^^^^^^^^^^^^^^^
 
-To add a newly created application to the Django project you need to:
+After adding a new application to the Django project we need to configure it:
 
 1. Create the data models in ``models.py``
 2. Register the data models in ``admin.py`` (if the **admin** application is installed)
@@ -75,7 +74,8 @@ To add a newly created application to the Django project you need to:
 6. Register the views URLs in ``urls.py`` (create the file if it does not exists)
 7. Add the application to the project's **INSTALLED_APPS** variable in ``DJANGO_PROJECT/settings.py``
 8. Include the application URL's pattern in the project's **urlpatterns** variable in ``DJANGO_PROJECT/urls.py``
-9. Profit!
+9. Create and run the migrations (database tasks)
+10. Profit!
 
 Migrations (database tasks)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
