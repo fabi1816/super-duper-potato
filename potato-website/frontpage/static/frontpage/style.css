@@ -1,0 +1,15 @@
+header {
+    text-align: center;
+}
+
+h2 {
+    color: gray;
+}
+
+h3 {
+    color: lightgray;
+}
+
+fieldset {
+    width: max-content;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="shortcut icon" href="{%  static 'frontpage/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'frontpage/style.css' %}">
+ 
+    <title>Frontpage</title>
+</head>
+<body>
+    <header>
+        <h1>Fabi Inc.</h1>
+        <h2>Application Directory</h2>
+    </header>
+
+    {% if apps_list %}
+    <ul>
+        {% for app in apps_list %}
+        <li>
+            <a href="{{ app.url }}">{{ app.name }}</a>: {{ app.description }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>
+        <strong>No applications are available</strong>
+    <p>
+    {% endif %}
+ 
+</body>
+</html>

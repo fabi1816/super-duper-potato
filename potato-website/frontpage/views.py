@@ -1,3 +1,22 @@
-from django.shortcuts import render
+from django.apps import apps
+from django.views.generic import ListView
 
-# Create your views here.
+
+class FrontPageView(ListView):
+    template_name = "frontpage/index.html"
+    context_object_name = "apps_list"
+
+    def get_queryset(self):
+        # For the moment, let's return a hardcoded list of installed applications
+        return [
+            {
+                "name": "FrontPage",
+                "url": "/",
+                "description": "This page, lists all available applications",
+            },
+            {
+                "name": "Recipes",
+                "url": "/recipes/",
+                "description": "Displays delicious recipes to make at home",
+            },
+        ]
