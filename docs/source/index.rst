@@ -11,7 +11,7 @@ Welcome to Super-duper-potato's documentation!
    :caption: Contents:
 
    description
-   Applications
+   applications
    django
    auth0
    roadmap
