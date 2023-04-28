@@ -11,7 +11,7 @@ Current applications
 Technologies used
 -----------------
 
-* :doc:`django <Django>`: Website framework
+* :doc:`django`: Website framework
 * :doc:`auth0`: Authentication and authorization 3rd party system
 * Sphinx: Documentation generator
 * Github actions: CD/CI pipeline
