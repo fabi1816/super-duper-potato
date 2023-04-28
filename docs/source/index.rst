@@ -15,7 +15,7 @@ Welcome to Super-duper-potato's documentation!
    auth0
 
 Indices and tables
-==================
+------------------
 
 * :ref:`genindex`
 * :ref:`modindex`
