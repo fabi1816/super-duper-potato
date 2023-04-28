@@ -2,6 +2,7 @@ Django
 ======
 
 Django it's the framework used for developing this multi-app site.
+
 It is not a trivial framework like `Flask <https://flask.palletsprojects.com>`_ wher you can understand everything clearly; Django has its own way of doing things.
 
 Project strucure
