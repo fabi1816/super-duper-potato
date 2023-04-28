@@ -11,5 +11,6 @@ Welcome to Super-duper-potato's documentation!
    :caption: Contents:
 
    description
+   Applications
    django
    auth0
