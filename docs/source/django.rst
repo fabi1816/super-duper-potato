@@ -98,7 +98,7 @@ These migrations should be committed to version control to be deployed, and exec
   > python manage.py migrate
 
 .. caution::
-  Watch out! The data won't be migrated, you need to do it manually
+  The data won't be migrated, you need to do it manually
 
 Some of the migrations are for the default Django applications, others for the data models for our applications
 
