@@ -13,10 +13,3 @@ Welcome to Super-duper-potato's documentation!
    description
    django
    auth0
-
-Indices and tables
-------------------
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
