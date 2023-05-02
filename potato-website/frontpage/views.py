@@ -25,7 +25,7 @@ class FrontPageView(ListView):
                 "description": "Displays delicious recipes to make at home",
             },
             {
-                "name": "security",
+                "name": "Security",
                 "url": "#",
                 "description": "Manages authentication of users",
             },
