@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'recipes.apps.RecipesConfig',
     'frontpage.apps.FrontpageConfig',
+    'security.apps.SecurityConfig',
 ]
 
 MIDDLEWARE = [
