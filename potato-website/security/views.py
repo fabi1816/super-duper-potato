@@ -4,7 +4,6 @@ from django.contrib.auth import login as auth_login, logout as auth_logout
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
 from django.urls import reverse
-from recipes.models import Recipe
 from urllib.parse import quote_plus, urlencode
 
 
@@ -24,9 +23,8 @@ oauth.register(
 
 def login(request):
     # Go to Auth0 for logging, they handle that stuff
-    # TODO: Return to the original page where the user logged in from
     return oauth.auth0.authorize_redirect(
-        request, request.build_absolute_uri(reverse("frontpage:index"))
+        request, request.build_absolute_uri(reverse("security:callback"))
     )
 
 
