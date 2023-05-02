@@ -42,7 +42,9 @@ This is the Django project itself, it's where all other applications live
 +--------+----------------------------------------------+
 |        | Externalize the configurations               |
 +--------+----------------------------------------------+
-|        | Write tests                                  |
+|        | Use a real database connection               |
++--------+----------------------------------------------+
+|        | Write tests, if possible                     |
 +--------+----------------------------------------------+
 
 
@@ -105,7 +107,7 @@ A hidden application with not visible pages that will handle all things related 
 +--------+------------------------------------------------------+
 | Status | Security Application                                 |
 +========+======================================================+
-|        | Hook security into the main potato                   |
+|   100% | Hook security into the main potato                   |
 +--------+------------------------------------------------------+
 |        | Login and logout functionality                       |
 +--------+------------------------------------------------------+
@@ -169,6 +171,8 @@ We'll use the tight integration between github and Azure to deploy into that Clo
 | Status | Azure cloud server                              |
 +========+=================================================+
 |        | Setup Azure account                             |
++--------+-------------------------------------------------+
+|        | Setup Azure database instance                   |
 +--------+-------------------------------------------------+
 |        | Setup Azure EC2 instance (or equivalent)        |
 +--------+-------------------------------------------------+
