@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# NOTE: All urls end in "/" (unless empty), they do NOT start with "/"
+
 urlpatterns = [
     path('', include('frontpage.urls')),
     path('admin/', admin.site.urls),
