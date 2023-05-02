@@ -195,6 +195,6 @@ Others thoughts that we might do, or not, just random ideas and possibilities fo
 +--------+---------------------------------------------------------------------+
 |        | * Think of more applications to add to the potato site              |
 |        |                                                                     |
-|        |     * APP: Are my neighbors fighting?                                 |
+|        |     * APP: Are my neighbors fighting?                               |
 |        |                                                                     |
 +--------+---------------------------------------------------------------------+
