@@ -10,7 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+from os import environ
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Loads environment variables from a dev-config file
+# does nothing if the file is not present
+# Which means that in PROD the env variables MUST be already configured
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,6 +31,11 @@ SECRET_KEY = 'django-insecure-&c4wi8hn*s*9ss+d&y#v#_snsg(0^hu_6v#y8gh#9cly0gu7(*
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+# Load Auth0 security configurations
+AUTH0_DOMAIN = environ["AUTH0_DOMAIN"]
+AUTH0_CLIENT_ID = environ["AUTH0_CLIENT_ID"]
+AUTH0_CLIENT_SECRET = environ["AUTH0_CLIENT_SECRET"]
 
 ALLOWED_HOSTS = []
 

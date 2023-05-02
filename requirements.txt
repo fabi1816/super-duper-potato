@@ -8,3 +8,6 @@ requests
 
 # For document generation
 sphinx
+
+# To handle dev and prod configurations
+python-dotenv
