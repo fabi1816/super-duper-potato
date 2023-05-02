@@ -15,7 +15,7 @@ Auth0 configuration dashboard
 
 * Allowed callback URLs: ``http://127.0.0.1:8000/recipes/callback``
 
-  * Auth0 will callback to this, after the user is authenticated, so as to be redirected to the appropiate URL
+  * Auth0 will callback to this, after the user is authenticated, so as to be redirected to the appropriate URL
 
 * Allowed logout URLs: ``http://127.0.0.1:8000/recipes/``
 
@@ -29,7 +29,7 @@ Django project configuration
 
 * ``Login`` method: Calls Auth0 API passing it the absolute URI to the ``callback`` method
 * ``Logout`` method: Clears the session and redirects to an Auth0 logout URL passing the ``returnTo`` URL
-* ``Callback`` method: Gets the autorization token and redirects to an appropiate URL in the site
+* ``Callback`` method: Gets the authorization token and redirects to an appropriate URL in the site
 
   * This is the place to link the Auth0 to the default authorization app in Django
 

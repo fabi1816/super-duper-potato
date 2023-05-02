@@ -42,6 +42,9 @@ This is the Django project itself, it's where all other applications live
 +--------+----------------------------------------------+
 |        | Externalize the configurations               |
 +--------+----------------------------------------------+
+|        | Write tests                                  |
++--------+----------------------------------------------+
+
 
 .. _recipes-roadmap:
 
@@ -68,6 +71,8 @@ Logged-in users can also access the recipes instructions
 +--------+-------------------------------------------------+
 |        | Add images to the recipes                       |
 +--------+-------------------------------------------------+
+|        | Write tests                                     |
++--------+-------------------------------------------------+
 
 .. _frontpage-roadmap:
 
@@ -81,11 +86,13 @@ A very simple applications that shows a frontpage with all available application
 +========+============================================================================+
 |   DONE | Hook frontpage into the main potato                                        |
 +--------+----------------------------------------------------------------------------+
-|        | Define a model for storing the avaiable apps                               |
+|        | Define a model for storing the available apps                              |
 +--------+----------------------------------------------------------------------------+
 |        | Change the implementation to retrieve the available apps from the database |
 +--------+----------------------------------------------------------------------------+
 |        | Improve page styles                                                        |
++--------+----------------------------------------------------------------------------+
+|        | Write tests                                                                |
 +--------+----------------------------------------------------------------------------+
 
 .. _security-roadmap:
@@ -108,6 +115,8 @@ A hidden application with not visible pages that will handle all things related 
 +--------+------------------------------------------------------+
 |        | Only allow registered users to be logged-in users    |
 +--------+------------------------------------------------------+
+|        | Write tests, if possible                             |
++--------+------------------------------------------------------+
 
 .. _documentation-roadmap:
 
@@ -119,7 +128,7 @@ A professional project *must* have decent documentation
 +--------+-----------------------------------------------------------------+
 | Status | Document the project                                            |
 +========+=================================================================+
-|    WIP | Add plenty of documentation while builing the project           |
+|    WIP | Add plenty of documentation while building the project          |
 +--------+-----------------------------------------------------------------+
 |        | Add the documentation as another application to the potato site |
 +--------+-----------------------------------------------------------------+
@@ -129,7 +138,7 @@ A professional project *must* have decent documentation
 CD/CI System
 ------------
 
-We want to automatize as much as possible and for that we'll use github actions and its thight integration with Azure
+We want to automatize as much as possible and for that we'll use github actions and its tight integration with Azure
 
 +--------+----------------------------------------+
 | Status | Setup CD/CI system with github actions |
@@ -154,7 +163,7 @@ We want to automatize as much as possible and for that we'll use github actions 
 Cloud Server
 ------------
 
-We'll use the thight integration between github and Azure to deploy into that Cloud
+We'll use the tight integration between github and Azure to deploy into that Cloud
 
 +--------+-------------------------------------------------+
 | Status | Azure cloud server                              |
@@ -177,12 +186,15 @@ We'll use the thight integration between github and Azure to deploy into that Cl
 Miscellaneous
 -------------
 
-Others thoughts that we might do, or not, just random ideas and posibilities for this project
+Others thoughts that we might do, or not, just random ideas and possibilities for this project
 
 +--------+---------------------------------------------------------------------+
 | Status | Miscellaneous                                                       |
 +========+=====================================================================+
 |        | Mini-GPT application? (Perhaps trained on some spanish literature?) |
 +--------+---------------------------------------------------------------------+
-|        | Think of more applications to add to the potato site                |
+|        | * Think of more applications to add to the potato site              |
+|        |                                                                     |
+|        |     * APP: Are my neighbors fighting?                                 |
+|        |                                                                     |
 +--------+---------------------------------------------------------------------+
