@@ -18,9 +18,9 @@
 
         {% if user.is_authenticated %}
         <span>Welcome {{ user.username }}!</span>
-        <a href="">Logout</a>
+        <a href="{% url 'security:logout' %}">Logout</a>
         {% else %}
-        <span class="warn-msg">Please <a href="">login</a> for full access</span>
+        <span class="warn-msg">Please <a href="{% url 'security:login' %}">login</a> for full access</span>
         {% endif %}
     </header>
 
