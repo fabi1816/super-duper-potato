@@ -9,15 +9,15 @@ I'll try to keep this organized
 +--------+------------------------------+
 | Status | Main Functionality           |
 +========+==============================+
-|    80% | :ref:`potato-roadmap`        |
+|    60% | :ref:`potato-roadmap`        |
 +--------+------------------------------+
-|    60% | :ref:`recipes-roadmap`       |
+|    50% | :ref:`recipes-roadmap`       |
 +--------+------------------------------+
-|    25% | :ref:`frontpage-roadmap`     |
+|    20% | :ref:`frontpage-roadmap`     |
 +--------+------------------------------+
-|     0% | :ref:`security-roadmap`      |
+|    65% | :ref:`security-roadmap`      |
 +--------+------------------------------+
-|    30% | :ref:`documentation-roadmap` |
+|    20% | :ref:`documentation-roadmap` |
 +--------+------------------------------+
 |     0% | :ref:`cdci-roadmap`          |
 +--------+------------------------------+
@@ -36,11 +36,13 @@ This is the Django project itself, it's where all other applications live
 +--------+----------------------------------------------+
 | Status | Main Potato site                             |
 +========+==============================================+
-|   DONE | Build and what not, all done before the docs |
+|   100% | Build and what not, all done before the docs |
 +--------+----------------------------------------------+
-|        | Load environment secrets with .env           |
+|   100% | Load environment secrets with .env           |
 +--------+----------------------------------------------+
 |        | Externalize the configurations               |
++--------+----------------------------------------------+
+|        | Secure the site with HTTPS                   |
 +--------+----------------------------------------------+
 |        | Use a real database connection               |
 +--------+----------------------------------------------+
@@ -59,13 +61,13 @@ Logged-in users can also access the recipes instructions
 +--------+-------------------------------------------------+
 | Status | Recipes Application                             |
 +========+=================================================+
-|   DONE | Hook recipes into the main potato               |
+|   100% | Hook recipes into the main potato               |
 +--------+-------------------------------------------------+
-|   DONE | Define the recipes model                        |
+|   100% | Define the recipes model                        |
 +--------+-------------------------------------------------+
-|   DONE | Add recipes data                                |
+|   100% | Add recipes data                                |
 +--------+-------------------------------------------------+
-|   DONE | Add limited functionality for non-logged users  |
+|   100% | Add limited functionality for non-logged users  |
 +--------+-------------------------------------------------+
 |        | Improve page styles                             |
 +--------+-------------------------------------------------+
@@ -86,7 +88,7 @@ A very simple applications that shows a frontpage with all available application
 +--------+----------------------------------------------------------------------------+
 | Status | Frontpage Application                                                      |
 +========+============================================================================+
-|   DONE | Hook frontpage into the main potato                                        |
+|   100% | Hook frontpage into the main potato                                        |
 +--------+----------------------------------------------------------------------------+
 |        | Define a model for storing the available apps                              |
 +--------+----------------------------------------------------------------------------+
@@ -104,21 +106,25 @@ Security Application
 
 A hidden application with not visible pages that will handle all things related to the Auth0 operations
 
-+--------+------------------------------------------------------+
-| Status | Security Application                                 |
-+========+======================================================+
-|   100% | Hook security into the main potato                   |
-+--------+------------------------------------------------------+
-|        | Login and logout functionality                       |
-+--------+------------------------------------------------------+
-|        | Hook frontpage to the login and logout functionality |
-+--------+------------------------------------------------------+
-|        | Hook recipes to the login and logout functionality   |
-+--------+------------------------------------------------------+
-|        | Only allow registered users to be logged-in users    |
-+--------+------------------------------------------------------+
-|        | Write tests, if possible                             |
-+--------+------------------------------------------------------+
++--------+-----------------------------------------------------------------------------------+
+| Status | Security Application                                                              |
++========+===================================================================================+
+|   100% | Hook security into the main potato                                                |
++--------+-----------------------------------------------------------------------------------+
+|   100% | Login and logout functionality                                                    |
++--------+-----------------------------------------------------------------------------------+
+|   100% | Configure Auth0 to handle this in localhost                                       |
++--------+-----------------------------------------------------------------------------------+
+|   100% | Hook frontpage to the login and logout functionality                              |
++--------+-----------------------------------------------------------------------------------+
+|   100% | Hook recipes to the login and logout functionality                                |
++--------+-----------------------------------------------------------------------------------+
+|   100% | Only allow registered users to be logged-in users                                 |
++--------+-----------------------------------------------------------------------------------+
+|        | Make the login/logout/callback return to the page that the user logged in from    |
++--------+-----------------------------------------------------------------------------------+
+|        | Write tests, if possible                                                          |
++--------+-----------------------------------------------------------------------------------+
 
 .. _documentation-roadmap:
 
@@ -130,7 +136,7 @@ A professional project *must* have decent documentation
 +--------+-----------------------------------------------------------------+
 | Status | Document the project                                            |
 +========+=================================================================+
-|    WIP | Add plenty of documentation while building the project          |
+|    20% | Add plenty of documentation while building the project          |
 +--------+-----------------------------------------------------------------+
 |        | Add the documentation as another application to the potato site |
 +--------+-----------------------------------------------------------------+
@@ -177,6 +183,10 @@ We'll use the tight integration between github and Azure to deploy into that Clo
 |        | Setup Azure EC2 instance (or equivalent)        |
 +--------+-------------------------------------------------+
 |        | Setup security consideration                    |
++--------+-------------------------------------------------+
+|        | Get a domain name for this application          |
++--------+-------------------------------------------------+
+|        | Configure Auth0 to handle this domain           |
 +--------+-------------------------------------------------+
 |        | Setup Nginx                                     |
 +--------+-------------------------------------------------+
