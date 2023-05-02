@@ -15,8 +15,18 @@ class FrontPageView(ListView):
                 "description": "This page, lists all available applications",
             },
             {
+                "name": "Admin",
+                "url": "/admin/",
+                "description": "Manages access and CRUD operations",
+            },
+            {
                 "name": "Recipes",
                 "url": "/recipes/",
                 "description": "Displays delicious recipes to make at home",
+            },
+            {
+                "name": "security",
+                "url": "#",
+                "description": "Manages authentication of users",
             },
         ]
