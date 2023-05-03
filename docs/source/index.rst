@@ -11,8 +11,8 @@ Welcome to Super-duper-potato's documentation!
    :caption: Contents:
 
    description
+   roadmap
    applications
    django
    auth0
    cloud
-   roadmap

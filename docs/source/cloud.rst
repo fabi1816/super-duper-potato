@@ -36,7 +36,7 @@ Offerings
 |                |          |             |        |                 | * App Engine is similar to CloudFoundry |
 |                |          |             |        |                 | * No standalone SQL database            |
 +----------------+----------+-------------+--------+-----------------+-----------------------------------------+
-|         Heroku |       No |         N/A |    Yes |             N/A | * Similar to CloudFoundry               |
+|         Heroku |   **No** |         N/A |    Yes |             N/A | * Similar to CloudFoundry               |
 |                |          |             |        |                 | * Everything is magically configured    |
 |                |          |             |        |                 | * No free tier                          |
 +----------------+----------+-------------+--------+-----------------+-----------------------------------------+
