@@ -68,7 +68,7 @@ We discarded *Heroku* for not having a free tier
 +----------------+------------------------------------------------+------------------------------------------+
 |            GCP | * Free tier has no time limit                  | * It has an *ugly* UI                    |
 |                | * Full server configuration will yield more XP | * **Has no standalone SQL db**           |
-|                | * Has good documentation                       | * The documentation is ugly                                         |
+|                | * Has good documentation                       | * The documentation is ugly              |
 +----------------+------------------------------------------------+------------------------------------------+
 | PythonAnyWhere | * Trivial configuration                        | * Magic configuration                    |
 |                | * Includes sub-domain                          | * No HTTPS setup in the free tier        |
