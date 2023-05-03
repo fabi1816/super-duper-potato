@@ -171,16 +171,30 @@ We want to automatize as much as possible and for that we'll use github actions 
 Cloud Server
 ------------
 
-We'll use the tight integration between github and Azure to deploy into that Cloud
+We wanted to use Azure for its tight integration with Github, however that is not possible within our budget (0$)
+The same happens with AWS' offerings
+
++--------+--------------------------------+
+| Result | Evaluate cloud offerings       |
++========+================================+
+|   NO   | Evaluate Azure                 |
++--------+--------------------------------+
+|   NO   | Evaluate AWS                   |
++--------+--------------------------------+
+|   ??   | What other options do we have? |
++--------+--------------------------------+
+
+.. note::
+    There are no *free* Azure nor AWS product that fulfills our needs for the project
 
 +--------+-------------------------------------------------+
-| Status | Azure cloud server                              |
+| Status | Cloud server                                    |
 +========+=================================================+
-|        | Setup Azure account                             |
+|        | Setup cloud account                             |
 +--------+-------------------------------------------------+
-|        | Setup Azure database instance                   |
+|        | Setup cloud database instance                   |
 +--------+-------------------------------------------------+
-|        | Setup Azure EC2 instance (or equivalent)        |
+|        | Setup cloud server instance                     |
 +--------+-------------------------------------------------+
 |        | Setup security consideration                    |
 +--------+-------------------------------------------------+
