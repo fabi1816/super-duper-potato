@@ -10,7 +10,7 @@ Project structure
 
 .. code-block:: sh
 
-  super-dupper-potato: Project root
+  super-duper-potato: Project root
   |   readme.md
   |   requirements.txt
   |
