@@ -171,21 +171,26 @@ We want to automatize as much as possible and for that we'll use github actions 
 Cloud Server
 ------------
 
-We wanted to use Azure for its tight integration with Github, however that is not possible within our budget (0$)
+We wanted to use Azure for its tight integration with Github, however that is not possible within our budget (0$).
 The same happens with AWS' offerings
 
 +--------+--------------------------------+
 | Result | Evaluate cloud offerings       |
 +========+================================+
-|   NO   | Evaluate Azure                 |
+|   No   | Azure                          |
 +--------+--------------------------------+
-|   NO   | Evaluate AWS                   |
+|   No   | AWS                            |
 +--------+--------------------------------+
-|   ??   | What other options do we have? |
+|   No   | What other options do we have? |
+|        |                                |
+|        | * GCP                          |
+|        | * Heroku                       |
+|        | * PythonAnyWhere               |
+|        |                                |
 +--------+--------------------------------+
 
 .. note::
-    There are no *free* Azure nor AWS product that fulfills our needs for the project
+    There are no *free* Azure nor AWS product that fulfills our needs for the project, we need to evaluate more options: :doc:`cloud`
 
 +--------+-------------------------------------------------+
 | Status | Cloud server                                    |

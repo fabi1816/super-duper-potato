@@ -14,4 +14,5 @@ Welcome to Super-duper-potato's documentation!
    applications
    django
    auth0
+   cloud
    roadmap
