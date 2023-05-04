@@ -11,9 +11,9 @@ I'll try to keep this organized
 +========+==============================+
 |    60% | :ref:`potato-roadmap`        |
 +--------+------------------------------+
-|    50% | :ref:`recipes-roadmap`       |
+|    60% | :ref:`recipes-roadmap`       |
 +--------+------------------------------+
-|    20% | :ref:`frontpage-roadmap`     |
+|    80% | :ref:`frontpage-roadmap`     |
 +--------+------------------------------+
 |    70% | :ref:`security-roadmap`      |
 +--------+------------------------------+
@@ -90,9 +90,9 @@ A very simple applications that shows a frontpage with all available application
 +========+============================================================================+
 |   100% | Hook frontpage into the main potato                                        |
 +--------+----------------------------------------------------------------------------+
-|        | Define a model for storing the available apps                              |
+|   100% | Define a model for storing the available apps                              |
 +--------+----------------------------------------------------------------------------+
-|        | Change the implementation to retrieve the available apps from the database |
+|   100% | Change the implementation to retrieve the available apps from the database |
 +--------+----------------------------------------------------------------------------+
 |        | Improve page styles                                                        |
 +--------+----------------------------------------------------------------------------+
