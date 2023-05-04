@@ -15,11 +15,11 @@ I'll try to keep this organized
 +--------+------------------------------+
 |    20% | :ref:`frontpage-roadmap`     |
 +--------+------------------------------+
-|    65% | :ref:`security-roadmap`      |
+|    70% | :ref:`security-roadmap`      |
 +--------+------------------------------+
 |    20% | :ref:`documentation-roadmap` |
 +--------+------------------------------+
-|     0% | :ref:`cdci-roadmap`          |
+|    50% | :ref:`cdci-roadmap`          |
 +--------+------------------------------+
 |     0% | :ref:`cloud-server-roadmap`  |
 +--------+------------------------------+
@@ -149,9 +149,11 @@ CD/CI System
 We want to automatize as much as possible and for that we'll use github actions and its tight integration with Azure
 
 +--------+----------------------------------------+
-| Status | Setup CD/CI system with github actions |
+| Status | CD/CI system                           |
 +========+========================================+
-|        | Execute tests                          |
+|   100% | Setup basic github actions             |
++--------+----------------------------------------+
+|   100% | Execute tests                          |
 +--------+----------------------------------------+
 |        | Check coverage ?                       |
 +--------+----------------------------------------+
@@ -159,11 +161,11 @@ We want to automatize as much as possible and for that we'll use github actions 
 +--------+----------------------------------------+
 |        | Check code style                       |
 +--------+----------------------------------------+
-|        | Build the documentation                |
+|   100% | Build the documentation                |
 +--------+----------------------------------------+
-|        | Deploy the project to Azure            |
+|        | Deploy the project to the cloud        |
 +--------+----------------------------------------+
-|        | Deploy the documentation to Azure      |
+|        | Deploy the documentation to the cloud  |
 +--------+----------------------------------------+
 
 .. _cloud-server-roadmap:
