@@ -39,7 +39,9 @@ jobs:
       - name: Build documentation
         run: |
           pip install sphinx
-          make -f docs/Makefile html
+          pushd docs
+          make html
+          popd
 
       - name: Deploy documentation
         run: echo TODO deploy docs somewhere
