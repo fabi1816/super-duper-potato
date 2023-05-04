@@ -1,4 +1,4 @@
-# Super-Duper-Potato
+# Super-Duper-Potato ![Status](https://github.com/fabi1816/super-duper-potato/actions/workflows/main-integration.yml/badge.svg)
 
 Build a Django website with multiple ugly application
 
