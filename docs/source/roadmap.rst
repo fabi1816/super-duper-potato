@@ -71,7 +71,7 @@ Logged-in users can also access the recipes instructions
 +--------+-------------------------------------------------+
 |        | Improve page styles                             |
 +--------+-------------------------------------------------+
-|        | Secure the detail page against non-logged users |
+|   100% | Secure the detail page against non-logged users |
 +--------+-------------------------------------------------+
 |        | Add images to the recipes                       |
 +--------+-------------------------------------------------+
@@ -174,25 +174,10 @@ Cloud Server
 ------------
 
 We wanted to use Azure for its tight integration with Github, however that is not possible within our budget (0$).
-The same happens with AWS' offerings
-
-+--------+--------------------------------+
-| Result | Evaluate cloud offerings       |
-+========+================================+
-|   No   | Azure                          |
-+--------+--------------------------------+
-|   No   | AWS                            |
-+--------+--------------------------------+
-|   No   | What other options do we have? |
-|        |                                |
-|        | * GCP                          |
-|        | * Heroku                       |
-|        | * PythonAnyWhere               |
-|        |                                |
-+--------+--------------------------------+
 
 .. note::
-    There are no *free* Azure nor AWS product that fulfills our needs for the project, we need to evaluate more options: :doc:`cloud`
+    There are no *free* Azure nor AWS product that fulfills our needs for the project
+    We need to evaluate more options: :doc:`cloud`
 
 +--------+-------------------------------------------------+
 | Status | Cloud server                                    |
