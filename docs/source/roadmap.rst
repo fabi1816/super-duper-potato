@@ -188,19 +188,17 @@ We wanted to use Azure for its tight integration with Github, however that is no
 +--------+-------------------------------------------------+
 |        | Setup cloud database instance                   |
 +--------+-------------------------------------------------+
-|        | Setup cloud server instance                     |
+|   100% | Setup cloud server instance                     |
 +--------+-------------------------------------------------+
-|        | Setup security consideration                    |
+|    30% | Setup security consideration                    |
 +--------+-------------------------------------------------+
 |        | Get a domain name for this application          |
 +--------+-------------------------------------------------+
 |        | Configure Auth0 to handle this domain           |
 +--------+-------------------------------------------------+
-|        | Setup Nginx                                     |
+|    10% | Setup Nginx                                     |
 +--------+-------------------------------------------------+
-|        | Setup GUnicorn or some other application server |
-+--------+-------------------------------------------------+
-|        | Setup DNS                                       |
+|    10% | Setup GUnicorn or some other application server |
 +--------+-------------------------------------------------+
 
 .. _miscellaneous-roadmap:
