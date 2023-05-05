@@ -27,10 +27,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-&c4wi8hn*s*9ss+d&y#v#_snsg(0^hu_6v#y8gh#9cly0gu7(*'
+SECRET_KEY = environ['SECRET_DJANGO_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = environ.get('DEBUG', 'False') == 'True'  # Debug needs to be a bool
 
 # Load Auth0 security configurations
 AUTH0_DOMAIN = environ["AUTH0_DOMAIN"]
