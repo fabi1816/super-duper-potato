@@ -11,5 +11,5 @@ Build a Django website with multiple ugly application
 Run the developer server:
 
 ```sh
-> python manage.py runserver
+> python manage.py runserver --settings "potatosite.settings.dev_settings"
 ```
