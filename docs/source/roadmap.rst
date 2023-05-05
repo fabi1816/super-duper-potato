@@ -40,7 +40,9 @@ This is the Django project itself, it's where all other applications live
 +--------+----------------------------------------------+
 |   100% | Load environment secrets with .env           |
 +--------+----------------------------------------------+
-|        | Externalize the configurations               |
+|   100% | Externalize the configurations               |
++--------+----------------------------------------------+
+|        | Externalize Allowed hosts                    |
 +--------+----------------------------------------------+
 |        | Secure the site with HTTPS                   |
 +--------+----------------------------------------------+
