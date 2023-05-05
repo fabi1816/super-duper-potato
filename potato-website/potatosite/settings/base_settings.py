@@ -15,10 +15,8 @@ from dotenv import load_dotenv
 # Loads environment variables from a dev-config file
 # does nothing if the file is not present
 # Which means that in PROD the env variables MUST be already configured
-found = load_dotenv()
-if not found:
-    # TODO: Only for testing purposes
-    raise RuntimeError("No .env file found!")
+load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
