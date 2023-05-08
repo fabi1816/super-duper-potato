@@ -132,5 +132,6 @@ dmypy.json
 # Extras
 cloud-info.*
 .vscode/
+*.code-workspace
 *.pem
 
