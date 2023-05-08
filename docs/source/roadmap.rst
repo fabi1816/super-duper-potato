@@ -165,10 +165,14 @@ We want to automatize as much as possible and for that we'll use github actions 
 +--------+----------------------------------------+
 |   100% | Build the documentation                |
 +--------+----------------------------------------+
-|        | Deploy the project to the cloud        |
+|    20% | Deploy the project to the cloud        |
 +--------+----------------------------------------+
 |        | Deploy the documentation to the cloud  |
 +--------+----------------------------------------+
+
+.. note::
+    Deploying code to the cloud seems to be of some complexity.
+    We'll need to analyze it in its own space: :doc:`deployment`
 
 .. _cloud-server-roadmap:
 
