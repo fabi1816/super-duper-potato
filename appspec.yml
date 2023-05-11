@@ -3,6 +3,7 @@
 #   "CodeDeploy User Guide" at
 #   https://docs.aws.amazon.com/codedeploy/latest/userguide/app-spec-ref.html
 
+# Fixed and used by CodeDeploy, DO NOT CHANGE
 version: 0.0
 
 # linux xor windows
