@@ -1,42 +1,32 @@
-# This is an appspec.yml template file for use with an EC2/On-Premises deployment in CodeDeploy.
-# The lines in this template starting with the hashtag symbol are 
-#   instructional comments and can be safely left in the file or 
-#   ignored.
+# This is an appspec.yml template file for use with an EC2 deployment in CodeDeploy.
 # For help completing this file, see the "AppSpec File Reference" in the  
 #   "CodeDeploy User Guide" at
 #   https://docs.aws.amazon.com/codedeploy/latest/userguide/app-spec-ref.html
+
 version: 0.0
-# Specify "os: linux" if this revision targets Amazon Linux, 
-#   Red Hat Enterprise Linux (RHEL), or Ubuntu Server  
-#   instances.
-# Specify "os: windows" if this revision targets Windows Server instances.
-# (You cannot specify both "os: linux" and "os: windows".)
+
+# linux xor windows
 os: linux 
-# os: windows
-# During the Install deployment lifecycle event (which occurs between the 
-#   BeforeInstall and AfterInstall events), copy the specified files 
+
+# During the Install deployment lifecycle event, copy the specified files
 #   in "source" starting from the root of the revision's file bundle 
 #   to "destination" on the Amazon EC2 instance.
 # Specify multiple "source" and "destination" pairs if you want to copy 
 #   from multiple sources or to multiple destinations.
-# If you are not copying any files to the Amazon EC2 instance, then remove the
-#   "files" section altogether. A blank or incomplete "files" section
-#   may cause associated deployments to fail.
 files:
-  - source: 
-    destination:
-  - source:
-    destination:
+  - source: docs/
+    destination: /home/ec2-user/potato-app/docs/
+  - source: potato-website/
+    destination: /home/ec2-user/potato-app/site/
+  - source: requirements.txt
+    destination: /home/ec2-user/potato-app/
+
 # For deployments to Amazon Linux, Ubuntu Server, or RHEL instances,
 #   you can specify a "permissions" 
 #   section here that describes special permissions to apply to the files 
 #   in the "files" section as they are being copied over to 
 #   the Amazon EC2 instance.
 #   For more information, see the documentation.
-# If you are deploying to Windows Server instances,
-#   then remove the 
-#   "permissions" section altogether. A blank or incomplete "permissions"
-#   section may cause associated deployments to fail.
 permissions:
   - object:
     pattern:
@@ -52,9 +42,7 @@ permissions:
       range:
     type:
       -
-# If you are not running any commands on the Amazon EC2 instance, then remove 
-#   the "hooks" section altogether. A blank or incomplete "hooks" section
-#   may cause associated deployments to fail.
+
 hooks:
 # For each deployment lifecycle event, specify multiple "location" entries 
 #   if you want to run multiple scripts during that event.
@@ -71,54 +59,34 @@ hooks:
 # For deployments to Amazon Linux, Ubuntu Server, or RHEL instances,
 #   you can specify "runas" in an event to
 #   run as the specified user. For more information, see the documentation.
-#   If you are deploying to Windows Server instances,
-#   remove "runas" altogether.
 # If you do not want to run any commands during a particular deployment
 #   lifecycle event, remove that event declaration altogether. Blank or 
 #   incomplete event declarations may cause associated deployments to fail.
-# During the ApplicationStop deployment lifecycle event, run the commands 
-#   in the script specified in "location" starting from the root of the 
-#   revision's file bundle.
+# All the scripts specified in "location" start from the root of the revision's file bundle.
   ApplicationStop:
-    - location: 
-      timeout:
-      runas:
-    - location: 
-      timeout:
-      runas: 
-# During the BeforeInstall deployment lifecycle event, run the commands 
-#   in the script specified in "location".
-  BeforeInstall:
-    - location: 
-      timeout:
-      runas: 
-    - location: 
-      timeout:
-      runas:
-# During the AfterInstall deployment lifecycle event, run the commands 
-#   in the script specified in "location".
+    - location: deploy/stop-app.sh
+      timeout: 10
+      runas: ec2-user
+
+#  BeforeInstall:
+#    - location:
+#      timeout:
+#      runas:
+
   AfterInstall:
-    - location:     
-      timeout: 
-      runas:
-    - location: 
-      timeout:
-      runas:
-# During the ApplicationStart deployment lifecycle event, run the commands 
-#   in the script specified in "location".
+    - location: deploy/install-dependencies.sh
+      timeout: 180
+      runas: ec2-user
+    - location: deploy/build-docs.sh
+      timeout: 180
+      runas: ec2-user
+
   ApplicationStart:
-    - location:     
-      timeout: 
-      runas:
-    - location: 
-      timeout:
-      runas:
-# During the ValidateService deployment lifecycle event, run the commands 
-#   in the script specified in "location".
-  ValidateService:
-    - location:     
-      timeout: 
-      runas:
-    - location: 
-      timeout:
-      runas:
+    - location: deploy/start-app.sh
+      timeout: 10
+      runas: ec2-user
+
+#  ValidateService:
+#    - location:
+#      timeout:
+#      runas:
