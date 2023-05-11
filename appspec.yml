@@ -22,28 +22,6 @@ files:
   - source: requirements.txt
     destination: /home/ec2-user/potato-app/
 
-# For deployments to Amazon Linux, Ubuntu Server, or RHEL instances,
-#   you can specify a "permissions" 
-#   section here that describes special permissions to apply to the files 
-#   in the "files" section as they are being copied over to 
-#   the Amazon EC2 instance.
-#   For more information, see the documentation.
-permissions:
-  - object:
-    pattern:
-    except:
-    owner:
-    group:
-    mode: 
-    acls:
-      -
-    context:
-      user:
-      type:
-      range:
-    type:
-      -
-
 hooks:
 # For each deployment lifecycle event, specify multiple "location" entries 
 #   if you want to run multiple scripts during that event.
