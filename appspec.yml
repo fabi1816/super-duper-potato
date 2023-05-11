@@ -42,6 +42,7 @@ hooks:
 #   lifecycle event, remove that event declaration altogether. Blank or 
 #   incomplete event declarations may cause associated deployments to fail.
 # All the scripts specified in "location" start from the root of the revision's file bundle.
+# The runas seems optional
   ApplicationStop:
     - location: deploy/stop-app.sh
       timeout: 10
