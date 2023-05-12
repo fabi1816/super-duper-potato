@@ -1,3 +1,14 @@
 #!/bin/bash
 
-echo Build docs script executed
+# Go to home for ec2-user and activate the python venv
+pushd $HOME
+source .venv/bin/activate
+
+# Build docs
+pushd potato/docs/
+make html
+popd
+
+# Deactivate the python venv and leave the ec2-user's home
+deactivate
+popd

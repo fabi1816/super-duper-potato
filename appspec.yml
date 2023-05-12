@@ -16,11 +16,11 @@ os: linux
 #   from multiple sources or to multiple destinations.
 files:
   - source: docs/
-    destination: /home/ec2-user/potato-app/docs/
+    destination: /home/ec2-user/potato/docs/
   - source: potato-website/
-    destination: /home/ec2-user/potato-app/site/
+    destination: /home/ec2-user/potato/app/
   - source: requirements.txt
-    destination: /home/ec2-user/potato-app/
+    destination: /home/ec2-user/potato/
 
 hooks:
 # For each deployment lifecycle event, specify multiple "location" entries 
@@ -46,6 +46,7 @@ hooks:
   ApplicationStop:
     - location: deploy/stop-app.sh
       timeout: 10
+      runas: ec2-user
 
 #  BeforeInstall:
 #    - location:
@@ -55,12 +56,18 @@ hooks:
   AfterInstall:
     - location: deploy/install-dependencies.sh
       timeout: 180
+      runas: ec2-user
     - location: deploy/build-docs.sh
       timeout: 180
+      runas: ec2-user
+    - location: deploy/config-app.sh
+      timeout: 180
+      runas: ec2-user
 
   ApplicationStart:
     - location: deploy/start-app.sh
       timeout: 10
+      runas: ec2-user
 
 #  ValidateService:
 #    - location:
