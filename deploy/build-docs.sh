@@ -6,7 +6,7 @@ source .venv/bin/activate
 
 # Build docs
 pushd potato/docs/
-make html
+echo make html
 popd
 
 # Deactivate the python venv and leave the ec2-user's home

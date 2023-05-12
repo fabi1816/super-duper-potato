@@ -6,7 +6,7 @@ source .venv/bin/activate
 
 # Start Gunicorn from the root of the Django app
 pushd potato/app/
-gunicorn -c $HOME/config/gunicorn/dev.py --env DJANGO_SETTINGS_MODULE=potatosite.settings.prod_settings
+echo gunicorn -c $HOME/config/gunicorn/dev.py --env DJANGO_SETTINGS_MODULE=potatosite.settings.prod_settings
 popd
 
 # TODO: Start the Nginx server

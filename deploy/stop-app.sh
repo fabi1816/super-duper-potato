@@ -8,7 +8,7 @@ source .venv/bin/activate
 echo Stop nginx
 
 # Stop Gunicorn
-killall gunicorn
+echo killall gunicorn
 
 # Deactivate the python venv and leave the ec2-user's home
 deactivate
