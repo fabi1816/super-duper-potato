@@ -19,7 +19,7 @@ I'll try to keep this organized
 +--------+------------------------------+
 |    20% | :ref:`documentation-roadmap` |
 +--------+------------------------------+
-|    50% | :ref:`cdci-roadmap`          |
+|    70% | :ref:`cdci-roadmap`          |
 +--------+------------------------------+
 |    50% | :ref:`cloud-server-roadmap`  |
 +--------+------------------------------+
@@ -165,7 +165,7 @@ We want to automatize as much as possible and for that we'll use github actions 
 +--------+----------------------------------------+
 |   100% | Build the documentation                |
 +--------+----------------------------------------+
-|    20% | Deploy the project to the cloud        |
+|    80% | Deploy the project to the cloud        |
 +--------+----------------------------------------+
 |        | Deploy the documentation to the cloud  |
 +--------+----------------------------------------+
