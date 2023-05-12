@@ -37,6 +37,7 @@ AUTH0_CLIENT_SECRET = environ["AUTH0_CLIENT_SECRET"]
 # ALLOWED_HOSTS = []
 # DATABASES = { ... }
 
+
 # Application definition
 
 INSTALLED_APPS = [
