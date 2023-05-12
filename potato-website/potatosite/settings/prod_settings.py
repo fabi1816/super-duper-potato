@@ -31,7 +31,7 @@ DATABASES = {
 # https://docs.djangoproject.com/en/4.2/ref/contrib/staticfiles
 
 # Collect static files into this directory
-STATIC_ROOT = environ["HOME"] + "/potato-app/static"
+STATIC_ROOT = "/var/www/legui.com.ar/static/"
 
 # Additional static files outside the installed apps
 # STATICFILES_DIRS = []
