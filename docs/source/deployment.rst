@@ -30,7 +30,7 @@ Getting started steps
     - A permission for an AWS service to access an AWS resource
     - Save the *ARN* value for the next step
     - Used in the deployment group creation
-3. Limit the CodeDeploy user's permissions
+3. [Optional] Limit the CodeDeploy user's permissions
     - This is tied to the user's permission, not CodeDeploy
     - I won't do this
 4. Create an *IAM instance profile* for the EC2 instance
@@ -41,14 +41,15 @@ Getting started steps
     2. SignOff from GitHub
     3. Associate the deployment to the GitHub account
 
-**Notes:**
+Steps execution
+^^^^^^^^^^^^^^^
 
 - Added a tag to the EC2 instance: `name: potato-ecs`
 - Created the service role: `CodeDeployRole4PotatoEC2`
 - Created the instance profile: `CodeDeploy4EC2-instance-profile`
 - Need and application in GitHub
-    [ ] Plan a revision
-    [ ] Add an `AppSpec` file
+    - Plan a revision
+    - Add an `AppSpec` file
 - Attached the instance profile `CodeDeploy4EC2-instance-profile` to the EC2 instance
 - Verified that the *AWS system manager* is installed in the EC2 instance
 - Installed the CodeDeploy agent in the EC2 instance
@@ -57,8 +58,12 @@ Getting started steps
     - Used the service role for CodeDeploy: `CodeDeployRole4PotatoEC2`
     - Installation of the CodeDeploy agent could have been done at this stage
     - Created **without** Load Balancing (single instance, makes no sense)
+- Create a `Deployment`
+    - Always needs the repository name: `fabi1816/super-duper-potato`
+    - Always needs the full commit id that we want to deploy
 
-> Create a `Deployment` in CodeDeploy to, actually, deploy to the EC2 instance
+.. note::
+    Create a `Deployment` in CodeDeploy to, actually, deploy to the EC2 instance
 
 Plan the revision
 ^^^^^^^^^^^^^^^^^
@@ -66,3 +71,33 @@ Plan the revision
 We need to gather all the source files and add a `AppSpec` file
 For EC2 deployment it must be `appspec.yml`
 
+- Copy the files
+- Set the files permission
+    - Does not seem necessary
+- TODO: Complete the scripts
+    [ ] Stop app
+    [ ] Start app
+    [ ] Install dependencies
+    [ ] Build docs
+    - Does not seem necessary to copy the deployment scripts
+- Available hooks in order
+    1. *ApplicationStop*
+        - Used to stop the app
+        - Can be used to remove installed packages
+    2. *BeforeInstall*
+        - Can be used for creating a backup of the current app
+    3. *Install*
+        - Internal; cannot be used
+    4. *AfterInstall*
+        - Can be used for configuring the app
+    5. *ApplicationStart*
+        - Used to start the app
+    6. *ValidateService*
+        - Used to verify the deployment
+    7. *BeforeBlockTraffic*, *BlockTraffic* and *AfterBlockTraffic*
+    8. *BeforeAllowTraffic*, *AllowTraffic* and *AfterAllowTraffic*
+        - These are related to the load balancer
+
+.. warn::
+    Django cannot write anything to its directory because all the files are owned by root.
+    We could change the permissions, or perhaps, because the execution is done by root, we won't need to.
