@@ -21,7 +21,7 @@ I'll try to keep this organized
 +--------+------------------------------+
 |    70% | :ref:`cdci-roadmap`          |
 +--------+------------------------------+
-|    50% | :ref:`cloud-server-roadmap`  |
+|    80% | :ref:`cloud-server-roadmap`  |
 +--------+------------------------------+
 |     0% | :ref:`miscellaneous-roadmap` |
 +--------+------------------------------+
@@ -41,8 +41,6 @@ This is the Django project itself, it's where all other applications live
 |   100% | Load environment secrets with .env           |
 +--------+----------------------------------------------+
 |   100% | Externalize the configurations               |
-+--------+----------------------------------------------+
-|        | Externalize Allowed hosts                    |
 +--------+----------------------------------------------+
 |        | Secure the site with HTTPS                   |
 +--------+----------------------------------------------+
@@ -138,7 +136,7 @@ A professional project *must* have decent documentation
 +--------+-----------------------------------------------------------------+
 | Status | Document the project                                            |
 +========+=================================================================+
-|    20% | Add plenty of documentation while building the project          |
+|    40% | Add plenty of documentation while building the project          |
 +--------+-----------------------------------------------------------------+
 |        | Add the documentation as another application to the potato site |
 +--------+-----------------------------------------------------------------+
@@ -167,7 +165,7 @@ We want to automatize as much as possible and for that we'll use github actions 
 +--------+----------------------------------------+
 |    80% | Deploy the project to the cloud        |
 +--------+----------------------------------------+
-|        | Deploy the documentation to the cloud  |
+|    50% | Deploy the documentation to the cloud  |
 +--------+----------------------------------------+
 
 .. note::
@@ -200,9 +198,9 @@ We wanted to use Azure for its tight integration with Github, however that is no
 +--------+-------------------------------------------------+
 |        | Configure Auth0 to handle this domain           |
 +--------+-------------------------------------------------+
-|    10% | Setup Nginx                                     |
+|    50% | Setup Nginx                                     |
 +--------+-------------------------------------------------+
-|    10% | Setup GUnicorn or some other application server |
+|    80% | Setup GUnicorn                                  |
 +--------+-------------------------------------------------+
 
 .. _miscellaneous-roadmap:
