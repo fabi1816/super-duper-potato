@@ -74,11 +74,12 @@ For EC2 deployment it must be `appspec.yml`
 - Copy the files
 - Set the files permission
     - Does not seem necessary
-- TODO: Complete the scripts
-    [ ] Stop app
-    [ ] Start app
-    [ ] Install dependencies
-    [ ] Build docs
+- Complete the scripts
+    - Stop app
+    - Start app
+    - Install dependencies
+    - Build docs
+    - Config app
     - Does not seem necessary to copy the deployment scripts
 - Available hooks in order
     1. *ApplicationStop*
