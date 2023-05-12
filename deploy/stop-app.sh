@@ -5,7 +5,7 @@ pushd $HOME
 source .venv/bin/activate
 
 # TODO: Stop the Nginx server
-echo Stop nginx
+echo sudo systemctl stop nginx
 
 # Stop Gunicorn
 echo killall gunicorn

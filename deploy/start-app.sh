@@ -10,7 +10,7 @@ echo gunicorn -c $HOME/config/gunicorn/dev.py --env DJANGO_SETTINGS_MODULE=potat
 popd
 
 # TODO: Start the Nginx server
-echo Start nginx
+echo sudo systemctl start nginx
 
 # Deactivate the python venv and leave the ec2-user's home
 deactivate

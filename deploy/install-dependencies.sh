@@ -4,6 +4,9 @@
 pushd $HOME
 source .venv/bin/activate
 
+# Load the secrets, not usually necesary
+source POTATO_SECRETS
+
 # Install all dependencies
 echo pip install -r potato/requirements.txt
 
