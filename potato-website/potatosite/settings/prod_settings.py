@@ -26,3 +26,12 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# Static files
+# https://docs.djangoproject.com/en/4.2/ref/contrib/staticfiles
+
+# Collect static files into this directory
+STATIC_ROOT = environ["HOME"] + "/potato-app/static"
+
+# Additional static files outside the installed apps
+# STATICFILES_DIRS = []
