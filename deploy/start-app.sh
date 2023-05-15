@@ -19,14 +19,7 @@ then
 
     # Gunicorn must be started from the manage.py directory
     pushd ~/potato/app/
-
-    echo gunicorn -c python:potatosite.settings.dev_gunicorn
-
-    # Print the log
-    sleep 1
-    echo
-    tail -n 7 /var/log/gunicorn/dev.log
-
+    echo gunicorn -c python:potatosite.settings.prod_gunicorn
     popd
 fi
 
