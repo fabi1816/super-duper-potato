@@ -1,14 +1,26 @@
 #!/bin/bash
 
-# Go to home for ec2-user and activate the python venv
+# Go to home for the user
 pushd $HOME
-source .venv/bin/activate
+
+# Activate the virtual environment if not already activated
+if [[ ! -v VIRTUAL_ENV ]]
+then
+    echo Activate Python virtual environment
+    source .venv/bin/activate
+fi
 
 # Build docs
 pushd potato/docs/
-echo make html
+make html
 popd
 
-# Deactivate the python venv and leave the ec2-user's home
-deactivate
+# Deactivate the virtual environment if not already deactivated
+if [[ -v VIRTUAL_ENV ]]
+then
+    echo De-activate Python virtual environment
+    deactivate
+fi
+
+# Leave home
 popd

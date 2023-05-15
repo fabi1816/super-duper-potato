@@ -1,15 +1,13 @@
 #!/bin/bash
 
-# Go to home for ec2-user and activate the python venv
+# Go to home for the user
 pushd $HOME
-source .venv/bin/activate
 
 # TODO: Stop the Nginx server
 echo sudo systemctl stop nginx
 
 # Stop Gunicorn
-echo killall gunicorn
+killall gunicorn
 
-# Deactivate the python venv and leave the ec2-user's home
-deactivate
+# Leave home
 popd

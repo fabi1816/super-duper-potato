@@ -1,15 +1,31 @@
 #!/bin/bash
 
-# Go to home for ec2-user and activate the python venv
+# Go to home for the user
 pushd $HOME
-source .venv/bin/activate
 
-# Load the secrets, not usually necesary
-source POTATO_SECRETS
+# We only load the secrets if they are not already loaded
+if [[ ! -v SECRET_DJANGO_KEY ]]
+then
+        echo Load Django secrets
+        source ~/POTATO_SECRETS
+fi
+
+# Activate the virtual environment if not active
+if [[ ! -v VIRTUAL_ENV ]]
+then
+        echo Activate Python virtual environment
+        source .venv/bin/activate
+fi
 
 # Install all dependencies
-echo pip install -r potato/requirements.txt
+pip install -r potato/requirements.txt
 
-# Deactivate the python venv and leave the ec2-user's home
-deactivate
+# Deactivate the virtual environment if active
+if [[ -v VIRTUAL_ENV ]]
+then
+    echo De-activate Python virtual environment
+    deactivate
+fi
+
+# Leave home
 popd
