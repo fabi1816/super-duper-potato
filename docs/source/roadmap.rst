@@ -163,7 +163,7 @@ We want to automatize as much as possible and for that we'll use github actions 
 +--------+----------------------------------------+
 |   100% | Build the documentation                |
 +--------+----------------------------------------+
-|    80% | Deploy the project to the cloud        |
+|    90% | Deploy the project to the cloud        |
 +--------+----------------------------------------+
 |    50% | Deploy the documentation to the cloud  |
 +--------+----------------------------------------+

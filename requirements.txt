@@ -1,6 +1,7 @@
 
 wheel
 django
+gunicorn
 
 # For Auth0
 authlib

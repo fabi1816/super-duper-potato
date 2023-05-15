@@ -20,7 +20,7 @@ then
     # Gunicorn must be started from the manage.py directory
     pushd ~/potato/app/
 
-    gunicorn -c python:potatosite.settings.dev_gunicorn
+    echo gunicorn -c python:potatosite.settings.dev_gunicorn
 
     # Print the log
     sleep 1
@@ -34,7 +34,7 @@ fi
 if [[ ! -e /var/run/nginx.pid ]]
 then
     echo Start the Nginx server
-    sudo systemctl start nginx
+    echo sudo systemctl start nginx
 fi
 
 # Deactivate the virtual environment if active

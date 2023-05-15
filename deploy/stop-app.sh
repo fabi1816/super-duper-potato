@@ -9,11 +9,11 @@ pushd $HOME
 if [[ -e /var/run/nginx.pid ]]
 then
     echo Stop the Nginx server
-    sudo systemctl stop nginx
+    echo sudo systemctl stop nginx
 fi
 
 # Stop Gunicorn
-killall gunicorn
+echo killall gunicorn
 
 # Leave home
 popd
