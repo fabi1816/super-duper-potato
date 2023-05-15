@@ -26,3 +26,6 @@ pidfile = "/var/run/gunicorn/dev.pid"
 
 # Daemonize the Gunicorn process (detach & enter background)
 daemon = True
+
+# Use the prod configuration for the Django application
+raw_env = ["DJANGO_SETTINGS_MODULE=potatosite.settings.prod_settings"]
