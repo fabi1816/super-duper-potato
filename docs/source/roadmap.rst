@@ -21,7 +21,7 @@ I'll try to keep this organized
 +--------+------------------------------+
 |    70% | :ref:`cdci-roadmap`          |
 +--------+------------------------------+
-|    80% | :ref:`cloud-server-roadmap`  |
+|    90% | :ref:`cloud-server-roadmap`  |
 +--------+------------------------------+
 |     0% | :ref:`miscellaneous-roadmap` |
 +--------+------------------------------+
@@ -163,7 +163,7 @@ We want to automatize as much as possible and for that we'll use github actions 
 +--------+----------------------------------------+
 |   100% | Build the documentation                |
 +--------+----------------------------------------+
-|    90% | Deploy the project to the cloud        |
+|    95% | Deploy the project to the cloud        |
 +--------+----------------------------------------+
 |    50% | Deploy the documentation to the cloud  |
 +--------+----------------------------------------+
@@ -192,15 +192,15 @@ We wanted to use Azure for its tight integration with Github, however that is no
 +--------+-------------------------------------------------+
 |   100% | Setup cloud server instance                     |
 +--------+-------------------------------------------------+
-|    30% | Setup security consideration                    |
+|   100% | Setup security consideration                    |
 +--------+-------------------------------------------------+
 |   100% | Get a domain name for this application          |
 +--------+-------------------------------------------------+
 |        | Configure Auth0 to handle this domain           |
 +--------+-------------------------------------------------+
-|    50% | Setup Nginx                                     |
+|   100% | Setup Nginx                                     |
 +--------+-------------------------------------------------+
-|    80% | Setup GUnicorn                                  |
+|   100% | Setup GUnicorn                                  |
 +--------+-------------------------------------------------+
 
 .. _miscellaneous-roadmap:
