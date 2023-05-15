@@ -47,3 +47,7 @@ SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # To protect user's privacy
 SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
+
+# Adds content security policy to block loading resources from unauthorized sources
+# Check how to allow sources in https://django-csp.readthedocs.io/en/latest/configuration.html
+MIDDLEWARE += ["csp.middleware.CSPMiddleware"]

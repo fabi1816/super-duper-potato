@@ -1,6 +1,7 @@
 
 wheel
 django
+django-csp
 gunicorn
 
 # For Auth0
