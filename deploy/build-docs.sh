@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: Extract all common parts to a helper/base script
+
 # Go to home for the user
 pushd $HOME
 

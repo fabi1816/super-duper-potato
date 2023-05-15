@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: Extract all common parts to a helper/base script
+
 # Go to home for the user
 pushd $HOME
 
@@ -26,12 +28,14 @@ then
     tail -n 7 /var/log/gunicorn/dev.log
 
     popd
-else
-    echo Gunicorn already running
 fi
 
-# TODO: Start the Nginx server
-echo sudo systemctl start nginx
+# Start the Nginx server if it is not running
+if [[ ! -e /var/run/nginx.pid ]]
+then
+    echo Start the Nginx server
+    sudo systemctl start nginx
+fi
 
 # Deactivate the virtual environment if active
 if [[ -v VIRTUAL_ENV ]]

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: Extract all common parts to a helper/base script
+
 # Go to home for the user
 pushd $HOME
 
@@ -10,16 +12,17 @@ then
     source .venv/bin/activate
 fi
 
-# Deploy sphinx documentation
+# TODO: Deploy sphinx documentation
 echo TODO: deploy docs
 
-# Deploy static files
+# TODO: Deploy static files
 echo TODO: Deploy static files
 pushd potato/app/
 echo python manage.py collectstatic --no-input --clear --settings 'potatosite.settings.prod_settings'
 popd
 
-echo config nginx
+# TODO: config nginx
+echo TODO: config nginx
 
 # Deactivate the virtual environment if not already deactivated
 if [[ -v VIRTUAL_ENV ]]
