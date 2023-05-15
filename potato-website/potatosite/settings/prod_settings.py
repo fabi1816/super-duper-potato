@@ -35,3 +35,12 @@ STATIC_ROOT = "/var/www/legui.com.ar/static/"
 
 # Additional static files outside the installed apps
 # STATICFILES_DIRS = []
+
+
+# Enable extra-security
+
+# HSTS
+SECURE_HSTS_SECONDS = 2592000  # In seconds, one month
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
