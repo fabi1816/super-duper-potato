@@ -44,3 +44,6 @@ SECURE_HSTS_SECONDS = 2592000  # In seconds, one month
 SECURE_HSTS_PRELOAD = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
+# To protect user's privacy
+SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
