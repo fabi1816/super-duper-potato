@@ -28,6 +28,9 @@ DATABASES = {
         'PORT': environ['DB_PORT'],
         'USER': environ['DB_USER'],
         'PASSWORD': environ['DB_PASS'],
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",  # Enables strict mode in the database
+        },
         'TEST': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': None,  # "None" means that it will use an in-memory db
