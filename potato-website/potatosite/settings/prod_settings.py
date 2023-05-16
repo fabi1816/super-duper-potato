@@ -60,3 +60,12 @@ SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
 # Adds content security policy to block loading resources from unauthorized sources
 # Check how to allow sources in https://django-csp.readthedocs.io/en/latest/configuration.html
 MIDDLEWARE += ["csp.middleware.CSPMiddleware"]
+
+# Secure cookies
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
+# Security checks that are not needed
+SILENCED_SYSTEM_CHECKS = [
+    "security.W008",  # SECURE_SSL_REDIRECT: The redirect is done by Nginx
+]
