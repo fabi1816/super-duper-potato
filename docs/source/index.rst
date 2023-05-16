@@ -15,6 +15,7 @@ Welcome to Super-duper-potato's documentation!
    applications
    django
    auth0
+   nginx
    cloud
    database
    deployment
