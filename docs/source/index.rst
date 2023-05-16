@@ -16,4 +16,5 @@ Welcome to Super-duper-potato's documentation!
    django
    auth0
    cloud
+   database
    deployment

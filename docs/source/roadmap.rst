@@ -42,9 +42,9 @@ This is the Django project itself, it's where all other applications live
 +--------+----------------------------------------------+
 |   100% | Externalize the configurations               |
 +--------+----------------------------------------------+
-|        | Secure the site with HTTPS                   |
+|   100% | Secure the site with HTTPS                   |
 +--------+----------------------------------------------+
-|        | Use a real database connection               |
+|    90% | Use a real database connection               |
 +--------+----------------------------------------------+
 |        | Write tests, if possible                     |
 +--------+----------------------------------------------+
