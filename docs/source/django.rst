@@ -116,3 +116,21 @@ These are defined in the ``potatosite.settings`` file by default:
 
 .. note::
   Remember to delete the applications that will not be needed in the project
+
+Database access
+---------------
+
+For dev we used sqlite, but for prod we need to use MySQL
+To use the MySQL database we need to install drivers.
+
+The default driver is `mysqlclient` which is a native (recommended) driver
+We install `mysqlclient` with pip
+
+There are some dependencies that we need to fulfill before we can install the native client.
+According to the documentation we need the python3 and mysql development headers
+`python3-devel ` and `mysql-devel ` can be installed with `yum/dnf`, I think...
+
+Only there is no `mysql-devel` on the EC2 instance, maybe we can use `mariadb105-devel`?
+Seems like it also needs `gcc`
+Also, `python3-devel` seems like it is not enough, we need `python3.11-devel`
+And with those it could install
