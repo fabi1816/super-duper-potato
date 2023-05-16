@@ -15,14 +15,10 @@ fi
 # TODO: Deploy sphinx documentation
 echo TODO: deploy docs
 
-# TODO: Deploy static files
-echo TODO: Deploy static files
+echo Deploy static files
 pushd potato/app/
-echo python manage.py collectstatic --no-input --clear --settings 'potatosite.settings.prod_settings'
+python manage.py collectstatic --no-input --clear --settings 'potatosite.settings.prod_settings'
 popd
-
-# TODO: config nginx
-echo TODO: config nginx
 
 # Deactivate the virtual environment if not already deactivated
 if [[ -v VIRTUAL_ENV ]]

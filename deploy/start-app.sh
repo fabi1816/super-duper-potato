@@ -12,23 +12,15 @@ then
         source .venv/bin/activate
 fi
 
-# If Gunicorn is not running, execute it
-if [[ ! -e /var/run/gunicorn/dev.pid ]]
-then
-    echo Start Gunicorn server
+# Start Gunicorn
+echo Start Gunicorn server from the manage.py directory
+pushd ~/potato/app/
+gunicorn -c python:potatosite.settings.prod_gunicorn
+popd
 
-    # Gunicorn must be started from the manage.py directory
-    pushd ~/potato/app/
-    echo gunicorn -c python:potatosite.settings.prod_gunicorn
-    popd
-fi
-
-# Start the Nginx server if it is not running
-if [[ ! -e /var/run/nginx.pid ]]
-then
-    echo Start the Nginx server
-    echo sudo systemctl start nginx
-fi
+# Reload the Nginx server to pick-up its new configuration
+echo Reload the Nginx server configuration
+sudo systemctl reload nginx
 
 # Deactivate the virtual environment if active
 if [[ -v VIRTUAL_ENV ]]
