@@ -28,7 +28,7 @@
     <ul>
         {% for app in apps_list %}
         <li>
-            <a href="{{ app.url }}">{{ app.name }}</a>: {{ app.description }}
+            <a href="{{ app.relative_url }}">{{ app.name }}</a>: {{ app.description }}
         </li>
         {% endfor %}
     </ul>
