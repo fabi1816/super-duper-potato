@@ -22,10 +22,19 @@ ALLOWED_HOSTS = [".legui.com.ar"]
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': environ['DB_NAME'],
+        'HOST': environ['DB_HOST'],
+        'PORT': environ['DB_PORT'],
+        'USER': environ['DB_USER'],
+        'PASSWORD': environ['DB_PASS'],
+        'TEST': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': None,  # "None" means that it will use an in-memory db
+        },
     }
 }
+
 
 # Static files
 # https://docs.djangoproject.com/en/4.2/ref/contrib/staticfiles
