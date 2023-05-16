@@ -9,7 +9,7 @@ I'll try to keep this organized
 +--------+------------------------------+
 | Status | Main Functionality           |
 +========+==============================+
-|    60% | :ref:`potato-roadmap`        |
+|    95% | :ref:`potato-roadmap`        |
 +--------+------------------------------+
 |    80% | :ref:`recipes-roadmap`       |
 +--------+------------------------------+
@@ -17,9 +17,9 @@ I'll try to keep this organized
 +--------+------------------------------+
 |    70% | :ref:`security-roadmap`      |
 +--------+------------------------------+
-|    20% | :ref:`documentation-roadmap` |
+|    50% | :ref:`documentation-roadmap` |
 +--------+------------------------------+
-|    70% | :ref:`cdci-roadmap`          |
+|    80% | :ref:`cdci-roadmap`          |
 +--------+------------------------------+
 |    90% | :ref:`cloud-server-roadmap`  |
 +--------+------------------------------+
@@ -44,7 +44,7 @@ This is the Django project itself, it's where all other applications live
 +--------+----------------------------------------------+
 |   100% | Secure the site with HTTPS                   |
 +--------+----------------------------------------------+
-|    90% | Use a real database connection               |
+|   100% | Use a real database connection               |
 +--------+----------------------------------------------+
 |        | Write tests, if possible                     |
 +--------+----------------------------------------------+
@@ -136,7 +136,7 @@ A professional project *must* have decent documentation
 +--------+-----------------------------------------------------------------+
 | Status | Document the project                                            |
 +========+=================================================================+
-|    40% | Add plenty of documentation while building the project          |
+|    70% | Add plenty of documentation while building the project          |
 +--------+-----------------------------------------------------------------+
 |        | Add the documentation as another application to the potato site |
 +--------+-----------------------------------------------------------------+
@@ -163,7 +163,7 @@ We want to automatize as much as possible and for that we'll use github actions 
 +--------+----------------------------------------+
 |   100% | Build the documentation                |
 +--------+----------------------------------------+
-|    95% | Deploy the project to the cloud        |
+|    90% | Deploy the project to the cloud        |
 +--------+----------------------------------------+
 |    50% | Deploy the documentation to the cloud  |
 +--------+----------------------------------------+
@@ -188,7 +188,7 @@ We wanted to use Azure for its tight integration with Github, however that is no
 +========+=================================================+
 |   100% | Setup cloud account                             |
 +--------+-------------------------------------------------+
-|        | Setup cloud database instance                   |
+|   100% | Setup cloud database instance                   |
 +--------+-------------------------------------------------+
 |   100% | Setup cloud server instance                     |
 +--------+-------------------------------------------------+
