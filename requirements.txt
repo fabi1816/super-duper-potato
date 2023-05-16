@@ -3,6 +3,7 @@ wheel
 django
 django-csp
 gunicorn
+mysqlclient
 
 # For Auth0
 authlib
