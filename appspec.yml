@@ -24,17 +24,6 @@ files:
     destination: /home/ec2-user/potato/
 
 
-# By default all files are owned by root
-# Change their owner to ec2-user to allow easy access
-#permissions:
-#  - object: /home/ec2-user/potato/
-#    owner: ec2-user
-#    group: ec2-user
-#    mode: 744
-#    type:
-#      - file
-
-
 hooks:
 # For each deployment lifecycle event, specify multiple "location" entries 
 #   if you want to run multiple scripts during that event.
