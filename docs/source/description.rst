@@ -13,6 +13,6 @@ Technologies used
 
 * :doc:`django`: Website framework
 * :doc:`auth0`: Authentication and authorization 3rd party system
-* :dic:`nginx`: HTTP and reverse proxy server
+* :doc:`nginx`: HTTP and reverse proxy server
 * Sphinx: Documentation generator
 * Github actions: CD/CI pipeline
