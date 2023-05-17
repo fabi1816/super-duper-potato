@@ -65,7 +65,7 @@ hooks:
       timeout: 10
       runas: ec2-user
 
-#  ValidateService:
-#    - location:
-#      timeout:
-#      runas:
+  ValidateService:
+    - location: deploy/verify.sh
+      timeout: 5
+      runas: ec2-user
