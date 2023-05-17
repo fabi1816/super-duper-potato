@@ -109,21 +109,24 @@ Details
 We are automating the deployment with the help of scripts
 In order of execution these are:
 
+- *stop-app.sh*
+    - Stops `Gunicorn`
+    - No need to stop `Nginx`, we'll just reload its configurations
+    - [ ] Always fails, not sure why...
 - *backup-prev.sh*
     - Deletes the old backup
     - Moves the currently deployed version to backup
     - Needs to be executed as root
-- *stop-app.sh*
-    - Stops `Gunicorn`
-    - No need to stop `Nginx`, we'll just reload its configurations
-- *build-docs.sh*
-    - Builds the `Sphinx` documentation
-    - Needs to be executed as root
-- *config-app.sh*
-    - Deploys the static content of the potato site
-    - TODO: Deploys the documentation to the potato site
+- *set-permissions.sh*
+    - Changes the owner of the code files to `ec2-user`
+    - This avoids a lot of issues with the permissions and the scripts
 - *install-dependencies.sh*
     - Installs all the python dependencies
+- *build-docs.sh*
+    - Builds the `Sphinx` documentation
+- *config-app.sh*
+    - Deploys the static content of the potato site
+    - [ ] TODO: Deploys the documentation to the potato site
 - *start-app.sh*
     - Loads the secrets into the environment
     - Starts `Gunicorn`
