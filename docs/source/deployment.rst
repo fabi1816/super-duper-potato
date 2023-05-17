@@ -99,7 +99,7 @@ For EC2 deployment it must be `appspec.yml`
     8. *BeforeAllowTraffic*, *AllowTraffic* and *AfterAllowTraffic*
         - These are related to the load balancer
 
-.. warn::
+.. warning::
     Django cannot write anything to its directory because all the files are owned by root.
     We could change the permissions, or perhaps, because the execution is done by root, we won't need to.
 
