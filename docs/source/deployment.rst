@@ -112,11 +112,10 @@ In order of execution these are:
 - *stop-app.sh*
     - Stops `Gunicorn`
     - No need to stop `Nginx`, we'll just reload its configurations
-    - [ ] Always fails, not sure why...
 - *backup-prev.sh*
     - Deletes the old backup
     - Moves the currently deployed version to backup
-    - Needs to be executed as root
+    - Added **sudo** to the commands so that we can use the script with `ec2-user`
 - *set-permissions.sh*
     - Changes the owner of the code files to `ec2-user`
     - This avoids a lot of issues with the permissions and the scripts
@@ -133,3 +132,6 @@ In order of execution these are:
     - Reloads `Nginx` configurations
         - The new configuration file for `Nginx` is copied with the site's code
         - This works because we have a symlink pointing to it
+- *verify.sh*
+    - Checks `Gunicorn` status
+    - Check `Nginx` status
