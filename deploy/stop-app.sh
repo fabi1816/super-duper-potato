@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# No need to stop the Nginx server we'll just reload its configuration
-EXISTS=$(ps -ef | pgrep gunicorn)
+echo
 
-echo "Does Gunicorn exists? -> $EXISTS"
+# NOTE: No need to stop the Nginx server we'll just reload its configuration
+
+EXISTS=$(ps -ef | pgrep gunicorn)
 
 # Stop Gunicorn if it is running
 if [[ $EXISTS ]]
 then
-    echo "Kill gunicorn"
+    echo "Kill running Gunicorn"
     killall gunicorn
 else
-    echo "There is NO gunicorn to kill"
+    echo "There is NO Gunicorn running"
 fi

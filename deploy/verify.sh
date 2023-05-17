@@ -6,7 +6,7 @@ ps -ef | grep gunicorn
 
 echo 
 echo "** How is Nginx? **"
-sudo systemctl statys nginx
+sudo systemctl status nginx
 
 echo 
 echo Check the gunicorn logs

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo
+
 pushd $HOME
 
 echo Activate Python virtual environment
