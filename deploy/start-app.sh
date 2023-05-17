@@ -1,33 +1,22 @@
 #!/bin/bash
 
-# TODO: Extract all common parts to a helper/base script
-
-# Go to home for the user
 pushd $HOME
 
-# Activate the virtual environment if not active
-if [[ ! -v VIRTUAL_ENV ]]
-then
-        echo Activate Python virtual environment
-        source .venv/bin/activate
-fi
+echo Load Django secrets
+source ~/POTATO_SECRETS
 
-# Start Gunicorn
+echo Activate Python virtual environment
+source .venv/bin/activate
+
 echo Start Gunicorn server from the manage.py directory
 pushd ~/potato/app/
 gunicorn -c python:potatosite.settings.prod_gunicorn
 popd
 
-# Reload the Nginx server to pick-up its new configuration
+echo De-activate Python virtual environment
+deactivate
+
 echo Reload the Nginx server configuration
 sudo systemctl reload nginx
 
-# Deactivate the virtual environment if active
-if [[ -v VIRTUAL_ENV ]]
-then
-    echo De-activate Python virtual environment
-    deactivate
-fi
-
-# Leave home
 popd

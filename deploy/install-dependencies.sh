@@ -1,33 +1,14 @@
 #!/bin/bash
 
-# TODO: Extract all common parts to a helper/base script
-
-# Go to home for the user
 pushd $HOME
 
-# We only load the secrets if they are not already loaded
-if [[ ! -v SECRET_DJANGO_KEY ]]
-then
-        echo Load Django secrets
-        source ~/POTATO_SECRETS
-fi
+echo Activate Python virtual environment
+source .venv/bin/activate
 
-# Activate the virtual environment if not active
-if [[ ! -v VIRTUAL_ENV ]]
-then
-        echo Activate Python virtual environment
-        source .venv/bin/activate
-fi
-
-# Install all dependencies
+# Install all pythondependencies
 pip install -r potato/requirements.txt
 
-# Deactivate the virtual environment if active
-if [[ -v VIRTUAL_ENV ]]
-then
-    echo De-activate Python virtual environment
-    deactivate
-fi
+echo De-activate Python virtual environment
+deactivate
 
-# Leave home
 popd

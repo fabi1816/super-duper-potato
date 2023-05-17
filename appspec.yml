@@ -44,17 +44,17 @@ hooks:
   BeforeInstall:
     - location: deploy/backup-prev.sh
       timeout: 10
-      runas: ec2-user
+      runas: root
 
   AfterInstall:
     - location: deploy/install-dependencies.sh
-      timeout: 180
+      timeout: 120
       runas: ec2-user
     - location: deploy/build-docs.sh
-      timeout: 180
-      runas: ec2-user
+      timeout: 60
+      runas: root
     - location: deploy/config-app.sh
-      timeout: 180
+      timeout: 10
       runas: ec2-user
 
   ApplicationStart:
