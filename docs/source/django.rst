@@ -134,3 +134,12 @@ Only there is no `mysql-devel` on the EC2 instance, maybe we can use `mariadb105
 Seems like it also needs `gcc`
 Also, `python3-devel` seems like it is not enough, we need `python3.11-devel`
 And with those it could install
+
+In summary, we need:
+
+- `dnf install python3-devel`
+- `dnf install mysql-devel`
+    - There is no `mysql-devel` in the EC2 instance, we can use `mariadb105-devel` instead
+    - `dnf install mariadb105-devel`
+- `dnf install gcc`
+- `dnf install python3.11-devel`

@@ -11,7 +11,7 @@ I'll try to keep this organized
 +========+==============================+
 |    95% | :ref:`potato-roadmap`        |
 +--------+------------------------------+
-|    80% | :ref:`recipes-roadmap`       |
+|    90% | :ref:`recipes-roadmap`       |
 +--------+------------------------------+
 |    80% | :ref:`frontpage-roadmap`     |
 +--------+------------------------------+
@@ -21,7 +21,7 @@ I'll try to keep this organized
 +--------+------------------------------+
 |    80% | :ref:`cdci-roadmap`          |
 +--------+------------------------------+
-|    90% | :ref:`cloud-server-roadmap`  |
+|   100% | :ref:`cloud-server-roadmap`  |
 +--------+------------------------------+
 |     0% | :ref:`miscellaneous-roadmap` |
 +--------+------------------------------+
@@ -196,7 +196,7 @@ We wanted to use Azure for its tight integration with Github, however that is no
 +--------+-------------------------------------------------+
 |   100% | Get a domain name for this application          |
 +--------+-------------------------------------------------+
-|        | Configure Auth0 to handle this domain           |
+|   100% | Configure Auth0 to handle this domain           |
 +--------+-------------------------------------------------+
 |   100% | Setup Nginx                                     |
 +--------+-------------------------------------------------+
