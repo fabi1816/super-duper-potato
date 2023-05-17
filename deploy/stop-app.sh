@@ -3,7 +3,7 @@
 # No need to stop the Nginx server we'll just reload its configuration
 
 # Stop Gunicorn if it is running
-if [[ -e /var/run/gunicorn/prod.pid ]]
+if [[ $(ps -ef | pgrep gunicorn) ]]
 then
     killall gunicorn
 fi
