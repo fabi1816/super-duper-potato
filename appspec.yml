@@ -44,7 +44,7 @@ hooks:
   BeforeInstall:
     - location: deploy/backup-prev.sh
       timeout: 10
-      runas: root
+      runas: ec2-user
 
   AfterInstall:
     - location: deploy/set-permissions.sh

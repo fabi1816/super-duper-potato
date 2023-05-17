@@ -3,9 +3,9 @@
 pushd $HOME
 
 echo Delete previous backup
-rm -rfv old-potato
+sudo rm -rfv old-potato
 
 echo Backup current
-mv potato/ old-potato/
+sudo mv potato/ old-potato/
 
 popd
