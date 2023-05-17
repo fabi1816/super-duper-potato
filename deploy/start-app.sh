@@ -2,13 +2,8 @@
 
 pushd $HOME
 
-if [[ -v SECRET_DJANGO_KEY ]]
-then
-    echo Load Django secrets
-    source ~/POTATO_SECRETS
-else
-    echo Secrets already loaded
-fi
+echo Load Django secrets
+source ~/POTATO_SECRETS
 
 echo Activate Python virtual environment
 source .venv/bin/activate
