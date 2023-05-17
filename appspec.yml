@@ -47,12 +47,15 @@ hooks:
       runas: root
 
   AfterInstall:
+    - location: deploy/set-permissions.sh
+      timeout: 5
+      runas: ec2-user
     - location: deploy/install-dependencies.sh
       timeout: 120
       runas: ec2-user
     - location: deploy/build-docs.sh
       timeout: 60
-      runas: root
+      runas: ec2-user
     - location: deploy/config-app.sh
       timeout: 10
       runas: ec2-user
