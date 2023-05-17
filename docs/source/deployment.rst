@@ -102,3 +102,31 @@ For EC2 deployment it must be `appspec.yml`
 .. warn::
     Django cannot write anything to its directory because all the files are owned by root.
     We could change the permissions, or perhaps, because the execution is done by root, we won't need to.
+
+Details
+^^^^^^^
+
+We are automating the deployment with the help of scripts
+In order of execution these are:
+
+- *backup-prev.sh*
+    - Deletes the old backup
+    - Moves the currently deployed version to backup
+    - Needs to be executed as root
+- *stop-app.sh*
+    - Stops `Gunicorn`
+    - No need to stop `Nginx`, we'll just reload its configurations
+- *build-docs.sh*
+    - Builds the `Sphinx` documentation
+    - Needs to be executed as root
+- *config-app.sh*
+    - Deploys the static content of the potato site
+    - TODO: Deploys the documentation to the potato site
+- *install-dependencies.sh*
+    - Installs all the python dependencies
+- *start-app.sh*
+    - Loads the secrets into the environment
+    - Starts `Gunicorn`
+    - Reloads `Nginx` configurations
+        - The new configuration file for `Nginx` is copied with the site's code
+        - This works because we have a symlink pointing to it
