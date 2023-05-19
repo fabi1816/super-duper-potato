@@ -23,7 +23,7 @@ I'll try to keep this organized
 +--------+------------------------------+
 |   100% | :ref:`cloud-server-roadmap`  |
 +--------+------------------------------+
-|     0% | :ref:`miscellaneous-roadmap` |
+|    N/A | :ref:`miscellaneous-roadmap` |
 +--------+------------------------------+
 
 .. _potato-roadmap:
@@ -214,6 +214,10 @@ Others thoughts that we might do, or not, just random ideas and possibilities fo
 | Status | Miscellaneous                                                       |
 +========+=====================================================================+
 |        | Mini-GPT application? (Perhaps trained on some spanish literature?) |
++--------+---------------------------------------------------------------------+
+|        | About page with information about the author                        |
++--------+---------------------------------------------------------------------+
+|        | Extract the common styles from the pages                            |
 +--------+---------------------------------------------------------------------+
 |        | * Think of more applications to add to the potato site              |
 |        |                                                                     |
