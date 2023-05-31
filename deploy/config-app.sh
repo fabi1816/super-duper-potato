@@ -7,11 +7,12 @@ pushd $HOME
 echo Activate Python virtual environment
 source .venv/bin/activate
 
-# TODO: Deploy sphinx documentation
-echo TODO: deploy docs
-
 echo Load Django secrets
 source ~/POTATO_SECRETS
+
+echo Deploy sphinx documentation
+rm -rf /var/www/legui.com.ar/docs/
+cp -r potato/docs/build/html/ /var/www/legui.com.ar/docs/
 
 echo Deploy static files
 pushd potato/app/
