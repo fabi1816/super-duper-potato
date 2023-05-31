@@ -1,6 +1,9 @@
 name: main
 
 on:
+  # Allows to manually trigger the workflow
+  workflow_dispatch
+
   # Triggers the workflow on push to the main branch
   push:
     branches: [ main ]
