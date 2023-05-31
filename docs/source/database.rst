@@ -10,7 +10,7 @@ We'll use a MySQL database from AWS
 
 Connect to the database with:
 
-    `mysql -h potato-db.cavc0w6fvxub.sa-east-1.rds.amazonaws.com -P 3306 -u admin -p`
+    `mysql -h <DATABASE_HOST> -P 3306 -u admin -p`
 
 Security
 --------

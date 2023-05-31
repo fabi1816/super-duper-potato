@@ -80,13 +80,13 @@ For EC2 deployment it must be `appspec.yml`
     - Install dependencies
     - Build docs
     - Config app
-    - Does not seem necessary to copy the deployment scripts
+    - It's not necessary to copy the deployment scripts
 - Available hooks in order
     1. *ApplicationStop*
         - Used to stop the app
         - Can be used to remove installed packages
     2. *BeforeInstall*
-        - Can be used for creating a backup of the current app
+        - Used for creating a backup of the current app
     3. *Install*
         - Internal; cannot be used
     4. *AfterInstall*
@@ -119,15 +119,15 @@ In order of execution these are:
 - *set-permissions.sh*
     - Changes the owner of the code files to `ec2-user`
     - This avoids a lot of issues with the permissions and the scripts
+    - This, normally, would be done in the `AppSpec` file, but it's very complex
 - *install-dependencies.sh*
     - Installs all the python dependencies
 - *build-docs.sh*
     - Builds the `Sphinx` documentation
 - *config-app.sh*
+    - Deploys the documentation to the potato site
     - Deploys the static content of the potato site
-    - [ ] TODO: Deploys the documentation to the potato site
 - *start-app.sh*
-    - Loads the secrets into the environment
     - Starts `Gunicorn`
     - Reloads `Nginx` configurations
         - The new configuration file for `Nginx` is copied with the site's code

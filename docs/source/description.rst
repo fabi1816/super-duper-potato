@@ -7,6 +7,8 @@ Current applications
 --------------------
 
 * Recipes
+* Frontpage
+* Development documentation
 
 Technologies used
 -----------------
@@ -16,3 +18,4 @@ Technologies used
 * :doc:`nginx`: HTTP and reverse proxy server
 * Sphinx: Documentation generator
 * Github actions: CD/CI pipeline
+* :doc:`AWS CodeDeploy </deployment>`: Deployment automation tool for AWS

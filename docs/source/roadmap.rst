@@ -17,9 +17,9 @@ I'll try to keep this organized
 +--------+------------------------------+
 |    70% | :ref:`security-roadmap`      |
 +--------+------------------------------+
-|    50% | :ref:`documentation-roadmap` |
+|    80% | :ref:`documentation-roadmap` |
 +--------+------------------------------+
-|    80% | :ref:`cdci-roadmap`          |
+|    90% | :ref:`cdci-roadmap`          |
 +--------+------------------------------+
 |   100% | :ref:`cloud-server-roadmap`  |
 +--------+------------------------------+
@@ -138,7 +138,7 @@ A professional project *must* have decent documentation
 +========+=================================================================+
 |    70% | Add plenty of documentation while building the project          |
 +--------+-----------------------------------------------------------------+
-|        | Add the documentation as another application to the potato site |
+|   100% | Add the documentation as another application to the potato site |
 +--------+-----------------------------------------------------------------+
 
 .. _cdci-roadmap:
@@ -165,7 +165,7 @@ We want to automatize as much as possible and for that we'll use github actions 
 +--------+----------------------------------------+
 |   100% | Deploy the project to the cloud        |
 +--------+----------------------------------------+
-|    50% | Deploy the documentation to the cloud  |
+|   100% | Deploy the documentation to the cloud  |
 +--------+----------------------------------------+
 
 .. note::

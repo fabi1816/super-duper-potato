@@ -3,16 +3,20 @@ Django
 
 `Django <https://www.djangoproject.com/>`_ it's the framework used for developing this multi-app site.
 
-It is not a trivial framework like `Flask <https://flask.palletsprojects.com>`_ when you can understand everything clearly; Django has its own way of doing things.
+It is not a trivial framework like `Flask <https://flask.palletsprojects.com>`_ when you can understand everything clearly
+Django has its own way of doing things.
 
 Project structure
 -----------------
+
+Basic structure to have as reference, **not** up-to-date
 
 .. code-block:: sh
 
   super-duper-potato: Project root
   |   readme.md
   |   requirements.txt
+  |   appspec.yml
   |
   +---docs: Sphinx documentation
   |
